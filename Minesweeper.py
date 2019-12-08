@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Nov 23 18:09:04 2019
 
 @author: Edgar
 """
