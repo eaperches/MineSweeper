@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+Created on Sat Nov 23 18:09:04 2019
 
 @author: Edgar
 """
@@ -111,7 +112,7 @@ class MineSweeper(object):
             for neighbor in neighbors:
                 x, y = neighbor
                 
-                if self.grid[neighbor[0]][neighbor[1]].data == 'X':
+                if self.grid[x][y].data == 'X':
                     neighbors_w_X.append(neighbor)
                 else:
                     if self.grid[x][y].flag == False:
@@ -141,7 +142,7 @@ class MineSweeper(object):
         return False
             
     def Play(self):
-        while self.status:
+        while True:
             self.show_grid_player()
             print('')
             self.show_grid_admin()
