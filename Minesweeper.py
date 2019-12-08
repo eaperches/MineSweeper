@@ -5,7 +5,6 @@ Created on Sat Nov 23 18:09:04 2019
 @author: Edgar
 """
 import random
-random.seed(0)
 
 class Node:
     def __init__(self, data, flag = False):
