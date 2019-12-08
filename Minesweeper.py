@@ -135,8 +135,8 @@ class MineSweeper(object):
             return True
         else:
             if self.status == False:
-                print('You have Lost!')
                 self.show_grid_admin()
+                print('You have Lost!')
                 return True
                 
         return False
@@ -187,7 +187,7 @@ class MineSweeper(object):
         
             
 #-------------------------------------
-Game = MineSweeper(5,5,10)
+Game = MineSweeper(5,5,8)
 Game.place_bombs()
 Game.Play()
 
