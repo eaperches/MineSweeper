@@ -171,7 +171,7 @@ class MineSweeper(object):
                     self.grid[i][j]
                     break
                 except:
-                    'Invalid input'
+                    print('Invalid input')
             Location = (i,j)
             
             if action == 'f':
