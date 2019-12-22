@@ -164,10 +164,10 @@ class MineSweeper(object):
                 break
             
             while True:
-                i = int(input('Enter the row of the location you want to execute your action: '))
-                j = int(input('Enter the column of the location you want to execute your action: '))
-                
                 try:
+                    i = int(input('Enter the row of the location you want to execute your action: '))
+                    j = int(input('Enter the column of the location you want to execute your action: '))
+                
                     self.grid[i][j]
                     break
                 except:
