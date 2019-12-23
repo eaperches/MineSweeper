@@ -22,7 +22,7 @@ class MineSweeper(object):
         self.status = 'Currently PLaying'
         self.data_for_nodes = ' '
         self.grid = self.create_grid()
-        
+        self.place_bombs()
     def create_grid(self):
         grid = []
         for i in range(self.rows):
@@ -187,8 +187,7 @@ class MineSweeper(object):
         
             
 #-------------------------------------
-Game = MineSweeper(5,5,8)
-Game.place_bombs()
+Game = MineSweeper(10,10,25)
 Game.Play()
 
 
