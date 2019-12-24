@@ -69,7 +69,7 @@ class MineSweeper(object):
                 
                 
     def place_bombs(self):
-        Bombs = self.bombs
+        Bombs = min(self.bombs, self.rows*self.columns)
         
         while Bombs:
             random_location = (random.randint(0, self.rows-1), random.randint(0,self.columns-1))
@@ -189,7 +189,7 @@ class MineSweeper(object):
         
             
 #-------------------------------------
-Game = MineSweeper(5,5,10)
+Game = MineSweeper(5,5,50)
 Game.Play()
 
 
