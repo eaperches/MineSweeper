@@ -5,6 +5,7 @@ Created on Sat Nov 23 18:09:04 2019
 @author: Edgar
 """
 import random
+import numpy as np
 
 class Node:
     def __init__(self, data, flag = False):
@@ -48,8 +49,7 @@ class MineSweeper(object):
                     r.append(node.data)
             grid.append(r)
         
-        for row in grid:
-            print(row)
+        print(np.array(grid))
             
     def show_grid_player(self):
         grid = []
@@ -64,8 +64,7 @@ class MineSweeper(object):
                     r.append(node.data)
             grid.append(r)
         
-        for row in grid:
-            print(row)
+        print(np.array(grid))
                 
                 
     def place_bombs(self):
@@ -189,7 +188,7 @@ class MineSweeper(object):
         
             
 #-------------------------------------
-Game = MineSweeper(5,5,50)
+Game = MineSweeper(5,5,10)
 Game.Play()
 
 
