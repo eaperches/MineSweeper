@@ -88,7 +88,7 @@ class MineSweeper(object):
             self.status = False
             
         elif self.grid[i][j].flag == True:
-            return
+            pass
             
         else:
             self.Flood(Location)
@@ -117,7 +117,7 @@ class MineSweeper(object):
                 else:
                     if self.grid[x][y].flag == False:
                         if neighbor!= Location:
-                            if abs(neighbor[0] - i) == 1 and abs(neighbor[1] - j) == 1:
+                            if abs(x - i) == 1 and abs(y - j) == 1:
                                 pass
                             else:
                                 direct_neighbors_wo_X.append(neighbor)
@@ -166,8 +166,10 @@ class MineSweeper(object):
             while True:
                 try:
                     i = int(input('Enter the row of the location you want to execute your action: '))
+                    assert i>= 0
+                    self.grid[i]
                     j = int(input('Enter the column of the location you want to execute your action: '))
-                
+                    assert j >= 0
                     self.grid[i][j]
                     break
                 except:
@@ -187,7 +189,7 @@ class MineSweeper(object):
         
             
 #-------------------------------------
-Game = MineSweeper(10,10,25)
+Game = MineSweeper(5,5,10)
 Game.Play()
 
 
