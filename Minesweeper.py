@@ -83,12 +83,10 @@ class MineSweeper(object):
         assert type(Location) == tuple, 'Location must be a tuple'
         
         i, j = Location
-        if self.grid[i][j].data == 'X':
-            self.status = False
-            
-        elif self.grid[i][j].flag == True:
+        if self.grid[i][j].flag == True:
             pass
-            
+        elif self.grid[i][j].data == 'X':
+            self.status = False
         else:
             self.Flood(Location)
             
@@ -165,9 +163,11 @@ class MineSweeper(object):
             while True:
                 try:
                     i = int(input('Enter the row of the location you want to execute your action: '))
+                    i -= 1
                     assert i>= 0
                     self.grid[i]
                     j = int(input('Enter the column of the location you want to execute your action: '))
+                    j -= 1
                     assert j >= 0
                     self.grid[i][j]
                     break
