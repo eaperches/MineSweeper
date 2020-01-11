@@ -18,6 +18,8 @@ class MineSweeper(object):
     def __init__(self, Rows, Columns, Bombs):
         self.rows = Rows
         self.columns = Columns
+        self.rows_array = np.rot90(np.array([[row for row in range(1, Rows+1)]]))
+        self.columns_array = np.array([[column for column in range(1, Columns+1)]])
         self.bombs = Bombs
         self.memory_clicks = []
         self.status = 'Currently PLaying'
@@ -64,7 +66,8 @@ class MineSweeper(object):
                     r.append(node.data)
             grid.append(r)
         
-        print(np.array(grid))
+        grid = np.array(grid)
+        print(grid)
                 
                 
     def place_bombs(self):
@@ -189,7 +192,7 @@ class MineSweeper(object):
         
             
 #-------------------------------------
-Game = MineSweeper(10,10,10)
+Game = MineSweeper(10,15,15)
 Game.Play()
 
 
