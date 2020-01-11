@@ -121,8 +121,9 @@ class MineSweeper(object):
     
             self.grid[i][j].data = len(neighbors_w_X)
             
-            for direct_neighbor_wo_X in direct_neighbors_wo_X:
-                self.Flood(direct_neighbor_wo_X)
+            if self.grid[i][j].data == 0:
+                for direct_neighbor_wo_X in direct_neighbors_wo_X:
+                    self.Flood(direct_neighbor_wo_X)
                 
                 
     def Check_Status(self):
@@ -188,7 +189,7 @@ class MineSweeper(object):
         
             
 #-------------------------------------
-Game = MineSweeper(5,5,10)
+Game = MineSweeper(10,10,10)
 Game.Play()
 
 
